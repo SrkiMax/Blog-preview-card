@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    //border: 1px solid black;
 }
 
 ul {
@@ -19,29 +20,40 @@ ul {
 body {
     background-color: var(--Yellow);
     padding: 5rem 1rem;
-    //display: flex;
-    //flex-direction: column;
+    display: flex;
+    /*flex-direction: column;
     //align-items: center;
-    //justify-items: center;
+    //justify-items: center; */
     font-family: "Figtree", sans-serif;
 }
 
-main {
+/*main {
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-}
+}   */
 
 .container {
-    //width: 400px;
+    max-width: 384px;
     background-color: var(--White);
     padding: 1.3rem;
     border-radius: 1rem;
 
     border: 1px solid black;
-    box-shadow: 8px 8px 0px black;
+    box-shadow: 8px 8px 0 black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*margin-inline: auto; */
+    /*margin: auto auto; */
 
+    /*display: flex;
+    //flex-direction: column;
+    //align-self: center;
+    //justify-self: center;
+    */
 }
 
 .image1 {
@@ -52,15 +64,17 @@ main {
 .container div:nth-child(2) h2:first-of-type {
     background-color: var(--Yellow);
     display: inline-block;
-    font-size: 1.3rem;
-    padding: 8px 15px;
-    border-radius: 0.5rem;
-    margin: 1.5rem 0rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding: 6px 10px;
+    border-radius: 0.25rem;
+    margin: 1rem 0rem 1rem;
 
 }
 
 .container div:nth-child(2) .published {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
     margin-bottom: 1rem;
 
 }
@@ -68,15 +82,16 @@ main {
 .container div:nth-child(2) h1 {
 
     margin-bottom: 1rem;
-    ;
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 
 .container div:nth-child(2) .these-languages {
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 1.5;
     color: var(--Grey);
-    margin-bottom: 2rem;
-    ;
+    margin-bottom: 1rem;
+
 }
 
 .container div:nth-child(2) ul {
@@ -87,13 +102,24 @@ main {
 
 .container div:nth-child(2) ul li:nth-child(2) {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.container2 img {
+    width: 35px;
+    height: 35px
 }
 
 .attribution {
     font-size: 11px;
-    text-align: center;
     margin-top: 2rem;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+
+
 }
 
 .attribution a {
