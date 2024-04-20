@@ -19,41 +19,51 @@ ul {
 
 body {
     background-color: var(--Yellow);
-    padding: 5rem 1rem;
-    display: flex;
-    /*flex-direction: column;
-    //align-items: center;
-    //justify-items: center; */
+    //padding: 5rem 1rem;    
     font-family: "Figtree", sans-serif;
+    //display: flex;
+
 }
 
-/*main {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-}   */
+
+
 
 .container {
     max-width: 384px;
+    min-width: 330px;
     background-color: var(--White);
     padding: 1.3rem;
     border-radius: 1rem;
 
     border: 1px solid black;
     box-shadow: 8px 8px 0 black;
+    /*
+    The code bellow will position the element's top left corner to the center of the page, and then using transform: translate move it back left and up by 50% making it get centered on the page */
+
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /*margin-inline: auto; */
-    /*margin: auto auto; */
 
-    /*display: flex;
-    //flex-direction: column;
-    //align-self: center;
-    //justify-self: center;
-    */
+    /*The code bellow will make some style to this div (make a bigger shadow) while hovering over a child element (h1 with text HTML & CSS foundations).
+    This is done by using this code on parrent and child: 
+    
+div.parent {  
+    pointer-events: none;
+}
+
+div.child {
+    pointer-events: auto;
+}
+
+div.parent:hover {
+    background: yellow;
+}     */
+
+    pointer-events: none;
+
+
+
 }
 
 .image1 {
@@ -61,7 +71,7 @@ body {
     border-radius: 1rem;
 }
 
-.container div:nth-child(2) h2:first-of-type {
+.container2 h2:first-of-type {
     background-color: var(--Yellow);
     display: inline-block;
     font-size: 0.9rem;
@@ -72,35 +82,74 @@ body {
 
 }
 
-.container div:nth-child(2) .published {
+.container2 .published {
     font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 1rem, 3vw;
+    font-weight: 700;
     margin-bottom: 1rem;
+    font-size: clamp(0.75rem, 1.75vw, 0.9rem);
 
 }
 
-.container div:nth-child(2) h1 {
+.container2 h1 {
 
     margin-bottom: 1rem;
     font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3.2vw, 1.5rem);
     font-weight: 800;
+
+    /*The code bellow will make some style to the parent div   .container (make a bigger shadow) while hovering over a child element (h1 with text HTML & CSS foundations).
+    This is done by using this code on parrent and child: 
+    
+div.parent {  
+    pointer-events: none;
 }
 
-.container div:nth-child(2) .these-languages {
-    font-size: 1rem;
+div.child {
+    pointer-events: auto;
+}
+
+div.parent:hover {
+    background: yellow;
+}     */
+    pointer-events: auto;
+}
+
+.container2 h1:hover {
+    color: var(--Yellow);
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+
+
+}
+
+.container:hover {
+    box-shadow: 15px 15px 0 black;
+    transition: all 0.2s ease-out;
+}
+
+
+
+
+.container2 .these-languages {
+    //font-size: 1rem;
     line-height: 1.5;
     color: var(--Grey);
     margin-bottom: 1rem;
+    /*The bellow code changes the font-size without the media-queries. It is done by using this code: 
+    font-size: clamp(min, ideal, max); example bellow:
+    font-size: clamp(0.8rem, 1.75vw, 1rem); */
+    font-size: clamp(0.8rem, 1.75vw, 1rem);
 
 }
 
-.container div:nth-child(2) ul {
+.container2 ul {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.container div:nth-child(2) ul li:nth-child(2) {
+.container2 ul li:nth-child(2) {
     font-weight: bold;
     font-size: 0.9rem;
     font-weight: 800;
